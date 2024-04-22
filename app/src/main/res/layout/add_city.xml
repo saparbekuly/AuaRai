@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_layout">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/back_icon"
+        android:contentDescription="Back"
+        tools:ignore="TouchTargetSizeCheck"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather"
+        android:textAlignment="center"
+        android:textColor="#DCA900"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Enter yout city"
+            android:inputType="text"
+            android:textSize="23dp"
+            android:paddingLeft="20dp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:text="Search"
+            android:textSize="23dp"
+            android:backgroundTint="#3a1872" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cities"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+</RelativeLayout>
